@@ -27,23 +27,21 @@ export interface CalculateOrderResponse {
 }
 
 // Menu items and pricing
-export const MENU = [
+export const MENU_LIST = [
     { name: 'red', price: 50, isBundle: false },
     { name: 'green', price: 40, isBundle: true },
     { name: 'blue', price: 30, isBundle: false },
     { name: 'yellow', price: 50, isBundle: false },
     { name: 'pink', price: 80, isBundle: true },
     { name: 'purple', price: 90, isBundle: false },
-    { name: 'orange', price: 120, isBundle: true },
+    { name: 'orange', price: 120, isBundle: true }
 ];
 
 @Injectable()
 export class FoodCalculatorService {
-    /**
-     * Calculates total price for the 7 menu items and applies discounts:
-     * - 5% discount for doubles (pairs) of Orange, Pink, or Green sets
-     * - 10% discount on total if customer has a member card
-     */
+    // Calculates total price for the 7 menu items and applies discounts:
+    // - 5% discount for doubles (pairs) of Orange, Pink, or Green sets
+    // - 10% discount on total if customer has a member card
     public calculate(order: CalculateOrderRequest): CalculateOrderResponse {
         const items = order.items || {};
         const hasMemberCard = Boolean(order.hasMemberCard);
@@ -51,13 +49,14 @@ export class FoodCalculatorService {
         let subtotal = 0;
         let bundleDiscount = 0;
 
-        // Calculate subtotal and 5% bundle discount using forEach
-        MENU.forEach((item) => {
-            const qty = items[item.name] || 0;
-            subtotal += qty * item.price;
+        // Calculate subtotal and 5% bundle discount 
+        MENU_LIST.forEach((menu) => {
+            const qty = items[menu.name] || 0;
+            subtotal += qty * menu.price;
 
-            if (item.isBundle) {
-                bundleDiscount += Math.floor(qty / 2) * (item.price * 2) * 0.05;
+            // Apply 5% discount for every 2 items (bundle)
+            if (menu.isBundle) {
+                bundleDiscount += Math.floor(qty / 2) * (menu.price * 2) * 0.05;
             }
         });
 

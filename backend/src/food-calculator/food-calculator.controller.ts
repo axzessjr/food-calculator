@@ -5,10 +5,12 @@ import type {
     CalculateOrderResponse,
 } from './food-calculator.service';
 
+// An endpoint to calculate the total price of the order.
 @Controller('food-calculator')
 export class FoodCalculatorController {
-    constructor(private readonly foodCalculatorService: FoodCalculatorService) {}
+    constructor(private readonly foodCalculatorService: FoodCalculatorService) { }
 
+    // POST: /food-calculator/calculate
     @Post('calculate')
     public calculate(@Body() body: CalculateOrderRequest): CalculateOrderResponse {
         return this.foodCalculatorService.calculate(body);
