@@ -26,30 +26,30 @@ Please see the attached screenshot files in the root folder:
 ## How to Set Up & Run
 
 1. Backend:
-====================
+```bash
 cd backend
 npm install
 npm run start:dev
-====================
+```
 
 The backend will run at http://localhost:3000.
 
 2. Frontend:
-====================
+```bash
 cd frontend
 npm install
 npm run dev
-====================
+```
 
 The frontend will run at http://localhost:5173.
 
 ## How to Run Unit Tests
 
 In the backend directory:
-====================
+```bash
 cd backend
 npm test
-====================
+```
 
 Verified Test Cases:
 - Desk #1 Example: Red set (50 THB) + Green set (40 THB) = 90 THB. With member card: 90 - 10% = 81 THB.
