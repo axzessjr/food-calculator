@@ -1,0 +1,242 @@
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 24px;
+    font-family:
+        -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+        sans-serif;
+    color: #1f2937;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.header {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+}
+
+.header h1 {
+    font-size: 26px;
+    margin-bottom: 6px;
+    color: #111827;
+}
+
+.header p {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 14px;
+}
+
+.example-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.example-buttons button {
+    background-color: #f3f4f6;
+    border: 1px solid #d1d5db;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.example-buttons button:hover {
+    background-color: #e5e7eb;
+}
+
+.example-buttons .reset-btn {
+    background-color: #fee2e2;
+    border-color: #fca5a5;
+    color: #991b1b;
+}
+
+.example-buttons .reset-btn:hover {
+    background-color: #fecaca;
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 28px;
+}
+
+@media (max-width: 720px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.menu-list h2,
+.summary-panel h2 {
+    font-size: 18px;
+    margin-bottom: 14px;
+    color: #111827;
+}
+
+.menu-item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    background-color: #f9fafb;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-name {
+    font-weight: 600;
+    font-size: 15px;
+    width: 90px;
+}
+
+.item-price {
+    font-size: 14px;
+    color: #4b5563;
+}
+
+.bundle-tag {
+    font-size: 11px;
+    background-color: #d1fae5;
+    color: #065f46;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.qty-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.qty-controls button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #d1d5db;
+    background-color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.qty-controls button:hover:not(:disabled) {
+    background-color: #e5e7eb;
+}
+
+.qty-controls button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.qty-controls input {
+    width: 44px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.member-card-option {
+    margin: 18px 0;
+    padding: 12px;
+    background-color: #fef3c7;
+    border: 1px solid #fde68a;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #92400e;
+}
+
+.member-card-option label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.calculate-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.calculate-btn:hover:not(:disabled) {
+    background-color: #1d4ed8;
+}
+
+.calculate-btn:disabled {
+    background-color: #93c5fd;
+    cursor: not-allowed;
+}
+
+.summary-panel {
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 16px;
+    height: fit-content;
+}
+
+.no-result {
+    color: #6b7280;
+    font-size: 14px;
+    text-align: center;
+    padding: 24px 0;
+}
+
+.error-box {
+    background-color: #fee2e2;
+    color: #991b1b;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.result-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.result-row.discount {
+    color: #059669;
+}
+
+.result-row.total {
+    font-size: 18px;
+    color: #111827;
+    font-weight: bold;
+    padding-top: 6px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 8px 0;
+}
