@@ -22,6 +22,7 @@ Please see the attached screenshot files in the root folder:
 - app-example-1.jpg
 - app-example-2.jpg
 - app-example-3.jpg
+- app-example-4.jpg
 
 ## How to Set Up & Run
 
